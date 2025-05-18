@@ -6,3 +6,5 @@ pillow
 ffmpeg-python
 emoji
 datasets
+librosa
+soundfile
