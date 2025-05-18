@@ -1,6 +1,6 @@
 streamlit
 torch
-transformers
+transformers[torch]
 openai-whisper
 pillow
 ffmpeg-python
