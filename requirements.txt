@@ -1,0 +1,7 @@
+streamlit
+torch
+transformers
+openai-whisper
+pillow
+ffmpeg-python
+emoji
