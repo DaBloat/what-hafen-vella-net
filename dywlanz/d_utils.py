@@ -4,6 +4,7 @@ import torch
 import torch.nn.functional as F
 from transformers import ElectraTokenizer, ElectraForSequenceClassification
 import emoji
+import re
 
 def censor_profanity(text):
     bad_words = ['damn', 'shit', 'fuck', 'bitch', 'asshole']  # Add more
