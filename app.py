@@ -20,7 +20,7 @@ if audio_file is not None:
     st.info('Transcribing Audio')
     result = whisper_model.transcribe("temp_audio.wav")
     transcribed_text = result["text"]
-    transcribed_text = censor_profanity(transcribed_text)
+    transcribed_text = d_utils.censor_profanity(transcribed_text)
     st.success("Transcription complete.")
     st.markdown(f"**Transcribed Text:** {transcribed_text}")
     
