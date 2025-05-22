@@ -5,6 +5,13 @@ import torch.nn.functional as F
 from transformers import ElectraTokenizer, ElectraForSequenceClassification
 import emoji
 
+def censor_profanity(text):
+    bad_words = ['damn', 'shit', 'fuck', 'bitch', 'asshole']  # Add more
+    for word in bad_words:
+        pattern = re.compile(rf'\b{re.escape(word)}\b', flags=re.IGNORECASE)
+        text = pattern.sub(lambda m: '*' * len(m.group()), text)
+    return text
+
 @st.cache_resource
 def load_whisper_model():
     return whisper.load_model("base")
