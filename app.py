@@ -9,8 +9,8 @@ text_tokenizer, sentiment_model = d_utils.load_sentiment_model()
 voice_processor, voice_model = db_utils.load_tonal_model()
 
 st.title("Audio Sentiment Analysis")
-st.write("Upload an audio file or enter text manually.")
-audio_file = st.file_uploader("Upload an audio file (.wav)", type=["wav", "mp3", "m4a"])
+st.write("Upload an audio file.")
+audio_file = st.file_uploader("Upload an audio file (.wav)", type=["wav", "mp3"])
 
 if audio_file is not None:
     with open("temp_audio.wav", "wb") as f:
